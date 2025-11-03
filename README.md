@@ -11,6 +11,8 @@ _Recipient of the **[2020 SIAM Activity Group on Supercomputing Best Paper Prize
 
 [<img alt="Discord logo" title="Join us on Discord!" height="32px" src="docs/images/discord.svg" />](docs/Discord.md)
 
+run the pre-config.sh to change the gcc
+
 Contents
 --------
 
