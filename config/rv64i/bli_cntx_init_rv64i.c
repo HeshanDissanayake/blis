@@ -37,8 +37,56 @@
 
 void bli_cntx_init_rv64i( cntx_t* cntx )
 {
+  blksz_t blkszs[ BLIS_NUM_BLKSZS ];
 	// Set default kernel blocksizes and functions.
 	bli_cntx_init_rv64i_ref( cntx );
 
 	// -------------------------------------------------------------------------
+
+	// Update the context with optimized native gemm micro-kernels.
+	bli_cntx_set_ukrs
+	(
+	  cntx,
+
+	  // level-3
+	  BLIS_GEMM_UKR, BLIS_DOUBLE, bli_dgemm_rvi_regsw2,
+
+	  BLIS_VA_END
+	);
+
+	// Update the context with storage preferences.
+	bli_cntx_set_ukr_prefs
+	(
+	  cntx,
+
+	  // level-3
+	  BLIS_GEMM_UKR_ROW_PREF,   BLIS_DOUBLE,   TRUE,
+
+	  BLIS_VA_END
+	);
+
+	//                                           s      d      c      z
+	bli_blksz_init_easy( &blkszs[ BLIS_MR ],     8,     4,    -1,    -1 );
+	bli_blksz_init_easy( &blkszs[ BLIS_NR ],    16,     4,    -1,    -1 );
+	bli_blksz_init_easy( &blkszs[ BLIS_MC ],   832,   320,    -1,    -1 );
+	bli_blksz_init_easy( &blkszs[ BLIS_KC ],  1026,   960,    -1,    -1 );
+	bli_blksz_init_easy( &blkszs[ BLIS_NC ],  4096,  4096,    -1,    -1 );
+
+
+	// Update the context with the current architecture's register and cache
+	// blocksizes (and multiples) for native execution.
+	bli_cntx_set_blkszs
+	(
+	  cntx,
+
+	  // level-3
+	  BLIS_NC, &blkszs[ BLIS_NC ], BLIS_NR,
+	  BLIS_KC, &blkszs[ BLIS_KC ], BLIS_KR,
+	  BLIS_MC, &blkszs[ BLIS_MC ], BLIS_MR,
+	  BLIS_NR, &blkszs[ BLIS_NR ], BLIS_NR,
+	  BLIS_MR, &blkszs[ BLIS_MR ], BLIS_MR,
+
+	  BLIS_VA_END
+	);
+
 }
