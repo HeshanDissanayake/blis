@@ -1,0 +1,3 @@
+./configure --prefix=/opt/dev/blis/blis_generic rv64i
+./configure --prefix=/opt/dev/blis/blis_4x4 rv64i
+./configure --prefix=/opt/dev/blis/blis_8x8 rv64i
