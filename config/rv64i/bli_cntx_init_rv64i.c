@@ -49,7 +49,7 @@ void bli_cntx_init_rv64i( cntx_t* cntx )
 	  cntx,
 
 	  // level-3
-	  BLIS_GEMM_UKR, BLIS_DOUBLE, bli_dgemm_rvi_regsw2,
+	  BLIS_GEMM_UKR, BLIS_DOUBLE, bli_dgemm_regsw_4x4,
 
 	  BLIS_VA_END
 	);
