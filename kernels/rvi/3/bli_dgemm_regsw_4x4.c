@@ -27,21 +27,21 @@ void bli_dgemm_regsw_4x4
 	const inc_t cs_b   = bli_cntx_get_blksz_def_dt( BLIS_DOUBLE, BLIS_BBN, cntx ); 
 
 
- printf("in kernle: m=%lu n=%lu k=%lu | alpha=%lf beta=%lf | A=%p B=%p C=%p | rs_a=%ld cs_a=%ld | rs_b=%ld cs_b=%ld |  rs_c=%ld cs_c=%ld | \n",
-       (unsigned long)m,
-       (unsigned long)n,
-       (unsigned long)k,
-       *(const double*)alpha,
-       a,
-       b,
-       *(const double*)beta,
-       c,
-       (long)rs_a,
-       (long)cs_a,
-       (long)rs_b,
-       (long)cs_b,
-       (long)rs_c,
-       (long)cs_c);
+//  printf("in kernle: m=%lu n=%lu k=%lu | alpha=%lf beta=%lf | A=%p B=%p C=%p | rs_a=%ld cs_a=%ld | rs_b=%ld cs_b=%ld |  rs_c=%ld cs_c=%ld | \n",
+//        (unsigned long)m,
+//        (unsigned long)n,
+//        (unsigned long)k,
+//        *(const double*)alpha,
+//        a,
+//        b,
+//        *(const double*)beta,
+//        c,
+//        (long)rs_a,
+//        (long)cs_a,
+//        (long)rs_b,
+//        (long)cs_b,
+//        (long)rs_c,
+//        (long)cs_c);
 
       // printf("\n--- A tile (m x k) REAL layout ---\n");
       // for (dim_t i = 0; i < m; ++i)

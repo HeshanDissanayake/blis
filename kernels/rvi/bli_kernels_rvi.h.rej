@@ -1,0 +1,5 @@
+--- kernels/rvi/bli_kernels_rvi.h
++++ kernels/rvi/bli_kernels_rvi.h
+@@ -1 +1 @@
+-GEMM_UKR_PROT( double,  d, gemm_regsw_.*)
++GEMM_UKR_PROT( double,  d, gemm_regsw_MRxNR)

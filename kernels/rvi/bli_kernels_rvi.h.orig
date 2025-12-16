@@ -31,5 +31,6 @@
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
-
-GEMM_UKR_PROT( double,  d, gemm_regsw_16x16)
+// GEMM_UKR_PROT( double,  d, gemm_regsw_4x4)
+GEMM_UKR_PROT( double,  d, gemm_regsw_3x3)
+// GEMM_UKR_PROT( double,  d, gemm_regsw_16x16)

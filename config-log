@@ -1,3 +1,9 @@
 ./configure --prefix=/opt/dev/blis/blis_generic rv64i
 ./configure --prefix=/opt/dev/blis/blis_4x4 rv64i
 ./configure --prefix=/opt/dev/blis/blis_8x8 rv64i
+./configure --prefix=/opt/dev/blis/blis_16x16 rv64i
+
+
+./configure --prefix=/opt/dev/blis/MC_16_KC_16_NC_120/blis_4x4 rv64i
+./configure --prefix=/opt/dev/blis/MC_16_KC_16_NC_120/blis_8x8 rv64i
+./configure --prefix=/opt/dev/blis/MC_16_KC_16_NC_120/blis_16x16 rv64i

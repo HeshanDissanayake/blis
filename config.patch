@@ -1,0 +1,13 @@
+s/^GEMM_UKR_PROT( double,  d, gemm_regsw_.*/GEMM_UKR_PROT( double,  d, gemm_regsw_16x16)/
+
+s/^	  BLIS_GEMM_UKR, BLIS_DOUBLE, bli_dgemm_regsw_.*/	  BLIS_GEMM_UKR, BLIS_DOUBLE, bli_dgemm_regsw_16x16,/
+
+
+s#^bli_blksz_init_easy(&blkszs\[ BLIS_MR \].*#bli_blksz_init_easy(\&blkszs[ BLIS_MR ],     8,     16,    -1,    -1 );#
+s#^bli_blksz_init_easy(&blkszs\[ BLIS_NR \].*#bli_blksz_init_easy(\&blkszs[ BLIS_NR ],    16,     16,    -1,    -1 );#
+s#^bli_blksz_init_easy(&blkszs\[ BLIS_MC \].*#bli_blksz_init_easy(\&blkszs[ BLIS_MC ],   832,     32,    -1,    -1 );#
+s#^bli_blksz_init_easy(&blkszs\[ BLIS_KC \].*#bli_blksz_init_easy(\&blkszs[ BLIS_KC ],  1026,     32,    -1,    -1 );#
+s#^bli_blksz_init_easy(&blkszs\[ BLIS_NC \].*#bli_blksz_init_easy(\&blkszs[ BLIS_NC ],  4096,     32,    -1,    -1 );#
+
+
+
