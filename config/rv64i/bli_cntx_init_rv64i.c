@@ -68,9 +68,9 @@ void bli_cntx_init_rv64i( cntx_t* cntx )
 	//                                           s      d      c      z
 bli_blksz_init_easy(&blkszs[ BLIS_MR ],     8,     16,    -1,    -1 );
 bli_blksz_init_easy(&blkszs[ BLIS_NR ],    16,     16,    -1,    -1 );
-bli_blksz_init_easy(&blkszs[ BLIS_MC ],   832,     32,    -1,    -1 );
-bli_blksz_init_easy(&blkszs[ BLIS_KC ],  1026,     32,    -1,    -1 );
-bli_blksz_init_easy(&blkszs[ BLIS_NC ],  4096,     32,    -1,    -1 );
+bli_blksz_init_easy(&blkszs[ BLIS_MC ],   832,     66,    -1,    -1 );
+bli_blksz_init_easy(&blkszs[ BLIS_KC ],  1026,     11,    -1,    -1 );
+bli_blksz_init_easy(&blkszs[ BLIS_NC ],  4096,     44,    -1,    -1 );
 
 
 	// Update the context with the current architecture's register and cache
