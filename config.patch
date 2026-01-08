@@ -5,9 +5,9 @@ s/^	  BLIS_GEMM_UKR, BLIS_DOUBLE, bli_dgemm_regsw_.*/	  BLIS_GEMM_UKR, BLIS_DOUB
 
 s#^bli_blksz_init_easy(&blkszs\[ BLIS_MR \].*#bli_blksz_init_easy(\&blkszs[ BLIS_MR ],     8,     16,    -1,    -1 );#
 s#^bli_blksz_init_easy(&blkszs\[ BLIS_NR \].*#bli_blksz_init_easy(\&blkszs[ BLIS_NR ],    16,     16,    -1,    -1 );#
-s#^bli_blksz_init_easy(&blkszs\[ BLIS_MC \].*#bli_blksz_init_easy(\&blkszs[ BLIS_MC ],   832,     66,    -1,    -1 );#
-s#^bli_blksz_init_easy(&blkszs\[ BLIS_KC \].*#bli_blksz_init_easy(\&blkszs[ BLIS_KC ],  1026,     11,    -1,    -1 );#
-s#^bli_blksz_init_easy(&blkszs\[ BLIS_NC \].*#bli_blksz_init_easy(\&blkszs[ BLIS_NC ],  4096,     44,    -1,    -1 );#
+s#^bli_blksz_init_easy(&blkszs\[ BLIS_MC \].*#bli_blksz_init_easy(\&blkszs[ BLIS_MC ],   832,     4096,    -1,    -1 );#
+s#^bli_blksz_init_easy(&blkszs\[ BLIS_KC \].*#bli_blksz_init_easy(\&blkszs[ BLIS_KC ],  1026,     384,    -1,    -1 );#
+s#^bli_blksz_init_easy(&blkszs\[ BLIS_NC \].*#bli_blksz_init_easy(\&blkszs[ BLIS_NC ],  4096,     16,    -1,    -1 );#
 
 
 
